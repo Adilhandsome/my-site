@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адиль — Легенда нашего времени</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f7fb;  /* Успокаивающий светлый фон */
+            color: #333;  /* Темный текст для контраста */
+            text-align: center;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        header {
+            background-color: #3a4f5c;  /* Спокойный синий оттенок */
+            color: #fff;
+            padding: 50px 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInHeader 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #b0c4de;
+        }
+
+        .section {
+            background-color: #ffffff;  /* Белый фон для блоков */
+            padding: 50px 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 0.8s forwards ease-out;
+        }
+
+        .section h2 {
+            font-size: 2.4em;
+            margin-bottom: 20px;
+            color: #2e3c47;
+            text-transform: uppercase;
+            animation: fadeInText 1s ease-out;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            animation: fadeInText 1s ease-out;
+        }
+
+        footer {
+            background-color: #3a4f5c;
+            color: #fff;
+            padding: 20px;
+            font-size: 1.1em;
+            text-align: center;
+            animation: fadeInFooter 1.5s ease-in-out;
+        }
+
+        iframe {
+            width: 100%;
+            height: 166px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Анимации */
+        @keyframes fadeInHeader {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Стили для кнопок раскрытия */
+        .btn {
+            background-color: #006f80;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: fadeInText 1s ease-out;
+        }
+
+        .btn:hover {
+            background-color: #004d6b;
+        }
+
+        /* Анимации для кнопок */
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Адиль — Легенда нашего времени</h1>
+        <p>Интеллект ✦ Музыка ✦ Юмор ✦ Игры ✦ Футбол ✦ Богатство ✦ Внешность</p>
+    </header>
+
+    <div class="section">
+        <h2>Кто я?</h2>
+        <p>Привет! Меня зовут Адиль. Я — человек с высоким интеллектом, потрясающими навыками в играх, отличным чувством юмора и успешным достижением в жизни. Моё внимание к деталям и способность быстро учиться позволяют мне добиваться выдающихся результатов. Я всегда стремлюсь быть лучшим и не останавливаюсь на достигнутом!</p>
+        <button class="btn" onclick="toggleContent('about')">Показать больше</button>
+        <p id="about" class="hidden">Я всегда верю, что успех приходит не сразу, а благодаря усердной работе и самоотдаче. Мой путь — это результат каждой маленькой победы на пути к моей цели.</p>
+    </div>
+
+    <div class="section">
+        <h2>Музыка — Lil Peep</h2>
+        <p>Я обожаю музыку Lil Peep. Его творчество стало для меня не просто звуком, а источником вдохновения. Это больше, чем просто музыка — это целый мир, который помогает мне двигаться вперёд, несмотря на трудности.</p>
+        <button class="btn" onclick="toggleContent('music')">Показать больше</button>
+        <p id="music" class="hidden">Когда я слушаю Lil Peep, я ощущаю, что его музыка действительно "взрывает" моё восприятие, заставляет меняться и расти как личность. Его слова — это настоящая философия, которая напоминает о важности быть собой.</p>
+    </div>
+
+    <div class="section">
+        <h2>Игровые достижения</h2>
+        <p>Я — победитель в Fortnite и FC24. Мой интеллект, рефлексы и решимость позволяют мне побеждать сильнейших соперников. На поле и в играх я всегда стремлюсь быть лучшим!</p>
+        <button class="btn" onclick="toggleContent('gaming')">Показать больше</button>
+        <p id="gaming" class="hidden">Каждый матч — это как новый вызов, который я принимаю с максимальной концентрацией и вниманием. Я всегда ищу пути улучшения, чтобы быть лучшим среди лучших!</p>
+    </div>
+
+    <div class="section">
+        <h2>Школьные успехи</h2>
+        <p>Учёба всегда была для меня важной частью жизни. Я стабильно на первом месте по успеваемости, и преподаватели ценят мою активность и стремление к знаниям.</p>
+        <button class="btn" onclick="toggleContent('education')">Показать больше</button>
+        <p id="education" class="hidden">Мои школьные успехи — результат не только усердной работы, но и страстного желания добиваться высот в каждой области. Я всегда открыт для новых знаний и стремлюсь быть примером для других.</p>
+    </div>
+
+    <div class="section">
+        <h2>Футбол — моя страсть</h2>
+        <p>На поле я как второй Криштиану Роналду! Моя техника, ловкость и понимание игры позволяют мне быть лидером команды и всегда побеждать. Мои футбольные навыки — это результат долгих тренировок и стремления к совершенству.</p>
+        <button class="btn" onclick="toggleContent('football')">Показать больше</button>
+        <p id="football" class="hidden">Я всегда стараюсь быть лучшим на поле, и это помогает мне не только в футболе, но и в жизни. Моя любовь к спорту и стремление к победе всегда в центре всего, что я делаю.</p>
+    </div>
+
+    <div class="section">
+        <h2>Богатство и успех</h2>
+        <p>Я успешен в жизни, и мои достижения в бизнесе позволяют мне наслаждаться роскошью. Мой успех — результат тяжёлой работы и умения видеть возможности там, где другие их не замечают.</p>
+        <button class="btn" onclick="toggleContent('wealth')">Показать больше</button>
+        <p id="wealth" class="hidden">Успех не случаен — он приходит к тем, кто не боится идти вперед, несмотря на любые трудности. Моя жизнь — это пример того, что богатство начинается с уверенности в себе.</p>
+    </div>
+
+    <div class="section">
+        <h2>Моя внешность</h2>
+        <p>Не только внутренний мир, но и внешний облик играет важную роль в жизни. Я уверен, что Бог наградил меня не только умом, но и внешностью, что позволяет мне быть уверенным и успешным во всём.</p>
+        <button class="btn" onclick="toggleContent('appearance')">Показать больше</button>
+        <p id="appearance" class="hidden">Красота — это не просто внешность, это харизма, которая пронизывает каждый мой шаг. Я уверен, что моя внешность — это отражение внутренней силы и уверенности.</p>
+    </div>
+
+    <footer>
+        <p>Адиль — сверхчеловек!</p>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
