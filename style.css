@@ -1,0 +1,129 @@
+/* Основной стиль для всего сайта */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2; /* светлый фон для спокойной атмосферы */
+    color: #333; /* темный текст для хорошей читаемости */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Контейнер, который будет держать весь контент */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Эффект анимации для появления */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Заголовки для каждой секции */
+h1, h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Текст для абзацев */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Блоки с информацией */
+.info-block {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Эффект анимации для блоков информации */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стиль для кнопок */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для изображения профиля */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Анимация для перехода между секциями */
+section {
+    display: none;
+    opacity: 0;
+    animation: fadeInSection 1s ease-in-out forwards;
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стиль для активных секций */
+section.active {
+    display: block;
+}
+
+/* Стиль для фона страницы */
+.background {
+    background: url('https://example.com/background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
